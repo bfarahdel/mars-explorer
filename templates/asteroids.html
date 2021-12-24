@@ -7,19 +7,20 @@
 
 <body>
     <h1>Number of Asteroids near Earth as of Today: {{astr_num}}</h1>
+
     <div class="astr">
         <ul class="props">
-            <li>Asteroid Name</li>
-            <li>Threat?</li>
-            <li>Estimated Diameter (Kilometers)</li>
-            <li>Asteroid Relative Velocity (Kilometers/Second)</li>
+            <li class="astr_head">Asteroid Name</li>
+            <li class="astr_head">Threat?</li>
+            <li class="astr_head">Estimated Diameter (Kilometers)</li>
+            <li class="astr_head">Relative Velocity (Kilometers/Second)</li>
         </ul>
         {% for i in range(0,astr_prop_len) %}
         <ul class="props">
-            <li>{{astr_name[i]}}</li>
-            <li>{{astr_hazard[i]}}</li>
-            <li>{{astr_diam_min[i]}} to {{astr_diam_max[i]}}</li>
-            <li>{{astr_rel_vel[i]}}</li>
+            <li class="astr_body">{{astr_name[i]}}</li>
+            <li class="astr_body">{{astr_hazard[i]}}</li>
+            <li class="astr_body">{{astr_diam_min[i]}} to {{astr_diam_max[i]}}</li>
+            <li class="astr_body">{{astr_rel_vel[i]}}</li>
         </ul>
         {% endfor %}
     </div>
