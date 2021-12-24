@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/static/asteroids.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Number of Asteroids near Earth as of Today: {{astr_num}}</h1>
+
+    <ul class="props">
+        <li>Asteroid Name</li>
+        <li>Hazardous?</li>
+        <li>Minimum Diameter (Kilometers)</li>
+        <li>Maximum Diameter (Kilometers)</li>
+        <li>Asteroid Relative Velocity (Kilometers/Second)</li>
+    </ul>
+    {% for i in range(0,astr_prop_len) %}
+    <ul class="props">
+        <li>{{astr_name[i]}}</li>
+        <li>{{astr_hazard[i]}}</li>
+        <li>{{astr_diam_min[i]}}</li>
+        <li>{{astr_diam_max[i]}}</li>
+        <li>{{astr_rel_vel[i]}}</li>
+    </ul>
+    {% endfor %}
+</body>
+
+</html>

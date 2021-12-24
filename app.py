@@ -1,5 +1,6 @@
 import os
 import flask
+from nasa import nasa
 
 app = flask.Flask(__name__)
 
@@ -8,6 +9,21 @@ app = flask.Flask(__name__)
 def main():
 
     return flask.render_template("index.html")
+
+
+@app.route("/asteroids", methods=["POST", "GET"])
+def astr():
+    astr_num, astr_prop = nasa().astr()
+    return flask.render_template(
+        "asteroids.html",
+        astr_num=astr_num,
+        astr_name=astr_prop["name_astr"],
+        astr_prop_len=len(astr_prop["name_astr"]),
+        astr_hazard=astr_prop["hazard"],
+        astr_diam_min=astr_prop["diam_min"],
+        astr_diam_max=astr_prop["diam_max"],
+        astr_rel_vel=astr_prop["rel_vel"],
+    )
 
 
 if __name__ == "__main__":
