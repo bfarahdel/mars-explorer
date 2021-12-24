@@ -1,6 +1,28 @@
+h1 {
+  text-align: center;
+}
+
+.astr {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 110em;
+  text-align: center;
+}
+
 .props {
-    columns: 5;
-    -webkit-columns: 5;
-    -moz-columns: 5;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
     list-style-type: none;
   }
+
+li {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
