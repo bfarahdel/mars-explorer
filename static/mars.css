@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+body {
+  background-color: rgb(0,2,0);
+  background-image: url(https://solarsystem.nasa.gov/system/resources/detail_files/600_PIA17760.jpg);
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2%;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+}
+
+a {
+    color: #bbdefb;
+    text-align: center;
+    text-decoration: underline;
+}
+    
+a:hover {
+    background-color: #d1c4e9;
+    color: black;
+}
+
+
+.box {
+  margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 130em;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75));
+  color: white;
+}
+
+.box_head {
+  font-size: 16pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.box_body {
+  font-size: 14pt;
+}
+
+.props {
+    columns: 5;
+    -webkit-columns: 5;
+    -moz-columns: 5;
+    list-style-type: none;
+  }
+
+li {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}

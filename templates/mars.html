@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/static/mars.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Weather in Mars</h1>
+
+    <div class="box">
+        <ul class="props">
+            <li class="box_head">Date (Last Datum)</li>
+            <li class="box_head">Atmospheric Temperature (Fahrenheit)</li>
+            <li class="box_head">Wind Speed (m/s)</li>
+            <li class="box_head">Atmospheric Pressure (Pa)</li>
+            <li class="box_head">Season</li>
+        </ul>
+        {% for i in range(0, mars_weather_len) %}
+        <ul class="props">
+            <li class="box_body">{{mars_weather_time[i]}}</li>
+            <li class="box_body">{{mars_low_atm_temp[i]}} to {{mars_high_atm_temp[i]}}</li>
+            <li class="box_body">{{mars_wind_speed[i]}}</li>
+            <li class="box_body">{{mars_atm_press[i]}}</li>
+            <li class="box_body">{{mars_season[i]}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

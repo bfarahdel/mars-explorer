@@ -44,6 +44,22 @@ def space():
     )
 
 
+@app.route("/mars", methods=["POST", "GET"])
+def mars():
+    weather = nasa().mars_weather()
+
+    return flask.render_template(
+        "mars.html",
+        mars_weather_time=weather["last_time"],
+        mars_weather_len=len(weather["last_time"]),
+        mars_high_atm_temp=weather["high_atm_temp"],
+        mars_low_atm_temp=weather["low_atm_temp"],
+        mars_wind_speed=weather["wind_speed"],
+        mars_atm_press=weather["atm_press"],
+        mars_season=weather["season"],
+    )
+
+
 if __name__ == "__main__":
     app.run(
         host=os.getenv("IP", "0.0.0.0"),

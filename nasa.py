@@ -110,3 +110,38 @@ class nasa:
         flare = {"begin_time": begin_time, "class_type": class_type, "link": link}
 
         return flare
+
+    def mars_weather(self):
+        url = f"https://api.nasa.gov/insight_weather/?api_key={self.nasa_key}&feedtype=json&ver=1.0"
+        response = requests.get(url=url)
+        if response.ok is True:
+            response_json = response.json()
+        else:
+            return "Data not available"
+
+        last_time = []
+        high_atm_temp = []
+        low_atm_temp = []
+        wind_speed = []
+        atm_press = []
+        season = []
+        keys = list(response_json.keys())
+        for event_id in list(response_json.keys())[:-2]:
+            event = response_json[event_id]
+            last_time.append(event["Last_UTC"])
+            high_atm_temp.append(round(event["AT"]["mx"], 3))
+            low_atm_temp.append(round(event["AT"]["mn"], 3))
+            wind_speed.append(round(event["HWS"]["av"], 3))
+            atm_press.append(round(event["PRE"]["av"], 3))
+            season.append(event["Season"])
+
+        weather = {
+            "last_time": last_time,
+            "high_atm_temp": high_atm_temp,
+            "low_atm_temp": low_atm_temp,
+            "wind_speed": wind_speed,
+            "atm_press": atm_press,
+            "season": season,
+        }
+
+        return weather
