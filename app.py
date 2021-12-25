@@ -7,8 +7,14 @@ app = flask.Flask(__name__)
 
 @app.route("/", methods=["POST", "GET"])
 def main():
-
-    return flask.render_template("index.html")
+    astro_pic = nasa().astro_pic()
+    return flask.render_template(
+        "index.html",
+        pic_img=astro_pic["img"],
+        pic_title=astro_pic["title"],
+        pic_expl=astro_pic["expl"],
+        pic_copy=astro_pic["copy"],
+    )
 
 
 @app.route("/asteroids", methods=["POST", "GET"])

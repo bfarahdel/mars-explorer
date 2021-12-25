@@ -1,23 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.main_title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36pt;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
 .navbar {
-    background-color: #fafafa;
-    overflow: hidden;
+    background-color: #263238;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
   }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
   
 .navbar a {
 float: left;
-color: black;
+width: 10em;
+color: white;
 text-align: center;
 text-decoration: none;
-padding: 14px 24px;
+padding: 14px 5px;
 font-size: 16px;
+font-family: 'Poppins', sans-serif;
 }
 
 .navbar a:hover {
 background-color: grey;
-color: black;
+color: #0d47a1;
 }
 
 .navbar a.active {
 background-color: #01579b;
 color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+figure {
+  margin-left: auto;
+  /* margin-right: auto; */
+  width: 60em;
+}
+
+figcaption {
+  text-align: left;
+}
+
+.pic {
+  display: flex;
+}
+
+img {
+  margin-left: auto;
+  margin-right: 0px;
+  width: 60em;
+  height: 40em;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+p {
+  text-align: left;
+  width: 20em;
+  margin-left: 0px;
+  margin-right: auto;
+  font-size: 14pt;
 }
