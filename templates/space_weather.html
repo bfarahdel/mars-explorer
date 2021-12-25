@@ -16,7 +16,7 @@
         {% for i in range(0,cme_len) %}
         <ul class="props">
             <li class="box_body">
-                <a href={{cme_link[i]}}>{{cme_time[i]}}</a>
+                <a target="_blank" rel="noopener noreferrer" href={{cme_link[i]}}>{{cme_time[i]}}</a>
             </li>
             <li class="box_body">{{cme_speed[i]}}</li>
         </ul>
@@ -33,7 +33,7 @@
         {% for i in range(0,flare_len) %}
         <ul class="props">
             <li class="box_body">
-                <a href={{flare_link[i]}}>{{flare_time[i]}}</a>
+                <a target="_blank" rel="noopener noreferrer" href={{flare_link[i]}}>{{flare_time[i]}}</a>
             </li>
             <li class="box_body">{{flare_class[i]}}</li>
         </ul>
