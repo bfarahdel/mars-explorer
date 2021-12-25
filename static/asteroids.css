@@ -58,7 +58,6 @@ h1 {
 .astr {
   margin-left: auto;
   margin-right: auto;
-  width: 110em;
   text-align: center;
   border: 1.0mm ridge;
   border-radius: 10px;
@@ -75,7 +74,6 @@ h1 {
 
 .astr_body {
   font-size: 16pt;
-
 }
 
 .props {
