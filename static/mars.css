@@ -74,14 +74,14 @@ a:hover {
 }
 
 .box_head {
-  font-size: 16pt;
+  font-size: 14pt;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: white;
 }
 
 .box_body {
-  font-size: 16pt;
+  font-size: 14pt;
 }
 
 .props {
