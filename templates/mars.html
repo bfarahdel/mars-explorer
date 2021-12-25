@@ -26,6 +26,19 @@
         </ul>
         {% endfor %}
     </div>
+
+    <h1 style="padding-top: 50px;">Rover Images</h1>
+
+    <div class="rover_images" style="display: flex;">
+        {% for j in range(0, mars_r_len) %}
+        <li style="padding: 50px; padding-top: 5px;">
+            <img src={{mars_r_img[j]}} alt="rover image" width="300px" height="300px"
+                style="border-radius: 10px; box-shadow: 0 0 10px #212121;">
+            <h3 class="rover_info">Earth date: {{mars_r_date[j]}}</h3>
+            <h3 class="rover_info">Rover name: {{mars_r_name[j]}}</h3>
+        </li>
+        {% endfor %}
+    </div>
 </body>
 
 </html>

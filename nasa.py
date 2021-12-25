@@ -2,7 +2,7 @@ from dotenv import find_dotenv, load_dotenv
 from datetime import datetime
 import os
 import requests
-import urllib.request
+import random
 
 from requests.models import Response
 
@@ -145,3 +145,29 @@ class nasa:
         }
 
         return weather
+
+    def mars_rover(self):
+        url = f"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key={self.nasa_key}"
+        response = requests.get(url=url)
+        if response.ok is True:
+            response_json = response.json()
+        else:
+            return "Data not available"
+
+        img = []
+        earth_date = []
+        rover_name = []
+        photos = response_json["photos"]
+        sample = random.sample(photos, 3)
+
+        for photo in sample:
+            img.append(photo["img_src"])
+            earth_date.append(photo["earth_date"])
+            rover_name.append(photo["rover"]["name"])
+
+        rover_data = {"img": img, "earth_date": earth_date, "rover_name": rover_name}
+
+        return rover_data
+
+
+print(nasa().mars_rover())

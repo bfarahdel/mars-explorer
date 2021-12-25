@@ -47,6 +47,7 @@ def space():
 @app.route("/mars", methods=["POST", "GET"])
 def mars():
     weather = nasa().mars_weather()
+    rover = nasa().mars_rover()
 
     return flask.render_template(
         "mars.html",
@@ -57,6 +58,10 @@ def mars():
         mars_wind_speed=weather["wind_speed"],
         mars_atm_press=weather["atm_press"],
         mars_season=weather["season"],
+        mars_r_img=rover["img"],
+        mars_r_len=len(rover["img"]),
+        mars_r_date=rover["earth_date"],
+        mars_r_name=rover["rover_name"],
     )
 
 

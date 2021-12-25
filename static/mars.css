@@ -52,6 +52,17 @@ a:hover {
     list-style-type: none;
   }
 
+.rover_images {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75em;
+}
+
+.rover_info {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
 li {
   list-style-type: none;
   padding-left: 0px;
