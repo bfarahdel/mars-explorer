@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/static/space_weather.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Coronal Mass Ejection</h1>
+
+    <div class="box">
+        <ul class="props">
+            <li class="cme_head">Begin Date</li>
+            <li class="cme_head">Speed (km/s)</li>
+        </ul>
+        {% for i in range(0,cme_len) %}
+        <ul class="props">
+            <li class="cme_body">
+                <a href={{cme_link[i]}}>{{cme_time[i]}}</a>
+            </li>
+            <li class="cme_body">{{cme_speed[i]}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

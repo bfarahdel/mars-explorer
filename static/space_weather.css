@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+body {
+  background-color: rgb(0,2,0);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+}
+
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+    
+a:hover {
+    background-color: #d1c4e9;
+    color: black;
+}
+
+
+.box {
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 110em;
+  text-align: center;
+  border: 1.0mm ridge;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #69f0ae;
+  background-color: #212121;
+  color: white;
+}
+
+.cme_head {
+  font-size: 16pt;
+  font-family: 'Roboto', sans-serif;
+  border-bottom: solid;
+}
+
+.cme_body {
+  font-size: 14pt;
+
+}
+
+.props {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style-type: none;
+  }
+
+li {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}

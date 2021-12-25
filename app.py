@@ -26,6 +26,19 @@ def astr():
     )
 
 
+@app.route("/space_weather", methods=["POST", "GET"])
+def space():
+    cme = nasa().space_cme()
+
+    return flask.render_template(
+        "space_weather.html",
+        cme_time=cme["time"],
+        cme_len=len(cme["time"]),
+        cme_speed=cme["speed"],
+        cme_link=cme["link"],
+    )
+
+
 if __name__ == "__main__":
     app.run(
         host=os.getenv("IP", "0.0.0.0"),

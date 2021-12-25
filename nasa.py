@@ -2,6 +2,9 @@ from dotenv import find_dotenv, load_dotenv
 from datetime import datetime
 import os
 import requests
+import urllib.request
+
+from requests.models import Response
 
 load_dotenv(find_dotenv())
 
@@ -67,3 +70,43 @@ class nasa:
         }
 
         return num_astr, astr_prop
+
+    def space_cme(self):
+        url = f"https://api.nasa.gov/DONKI/CMEAnalysis?&mostAccurateOnly=true&speed=500&halfAngle=30&catalog=ALL&api_key={self.nasa_key}"
+        response = requests.get(url=url)
+        if response.ok is True:
+            response_json = response.json()
+        else:
+            return "Data not available"
+
+        time = []
+        speed = []
+        link = []
+        for event in response_json:
+            time.append(event["time21_5"][0:10])
+            speed.append(event["speed"])
+            link.append(event["link"])
+
+        cme = {"time": time, "speed": speed, "link": link}
+
+        return cme
+
+    def space_flare(self):
+        url = f"https://api.nasa.gov/DONKI/FLR?&api_key={self.nasa_key}"
+        response = requests.get(url=url)
+        if response.ok is True:
+            response_json = response.json()
+        else:
+            return "Data not available"
+
+        begin_time = []
+        class_type = []
+        link = []
+        for event in response_json:
+            begin_time.append(event["beginTime"][0:10])
+            class_type.append(event["classType"])
+            link.append(event["link"])
+
+        flare = {"begin_time": begin_time, "class_type": class_type, "link": link}
+
+        return flare
