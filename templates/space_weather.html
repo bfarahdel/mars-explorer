@@ -3,11 +3,28 @@
 
 <head>
     <link href="/static/space_weather.css" rel="stylesheet">
+    <h1 class="main_title">Space Explorer</h1>
 </head>
 
 <body>
-    <h1>Coronal Mass Ejection</h1>
+    <nav class="navbar">
+        <ul style="display: flex; justify-content: center; align-items: center; list-style-type: none;">
+            <li class="navbar_list">
+                <a href="/">Home</a>
+            </li>
+            <li class="navbar_list">
+                <a href="/asteroids">Asteroids</a>
+            </li>
+            <li class="navbar_list">
+                <a class="active" href="/space_weather">Space Weather</a>
+            </li class="navbar_list">
+            <li class="navbar_list">
+                <a href="/mars">Mars</a>
+            </li>
+        </ul>
+    </nav>
 
+    <h1>Coronal Mass Ejection</h1>
     <div class="box">
         <ul class="props">
             <li class="box_head">Begin Date</li>
@@ -24,7 +41,6 @@
     </div>
 
     <h1>Solar Flare</h1>
-
     <div class="box">
         <ul class="props">
             <li class="box_head">Begin Date</li>

@@ -3,11 +3,28 @@
 
 <head>
     <link href="/static/asteroids.css" rel="stylesheet">
+    <h1 class="main_title">Space Explorer</h1>
 </head>
 
 <body>
-    <h1>Number of Asteroids near Earth as of Today: {{astr_num}}</h1>
+    <nav class="navbar">
+        <ul style="display: flex; justify-content: center; align-items: center; list-style-type: none;">
+            <li class="navbar_list">
+                <a href="/">Home</a>
+            </li>
+            <li class="navbar_list">
+                <a class="active" href="/asteroids">Asteroids</a>
+            </li>
+            <li class="navbar_list">
+                <a href="/space_weather">Space Weather</a>
+            </li class="navbar_list">
+            <li class="navbar_list">
+                <a href="/mars">Mars</a>
+            </li>
+        </ul>
+    </nav>
 
+    <h1>Number of Asteroids near Earth as of Today: {{astr_num}}</h1>
     <div class="astr">
         <ul class="props">
             <li class="astr_head">Asteroid Name</li>

@@ -1,9 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
 body {
   background-color: rgb(0,2,0);
   background-image: url(https://solarsystem.nasa.gov/system/resources/detail_files/600_PIA17760.jpg);
+}
+
+.main_title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36pt;
+}
+
+.navbar {
+  background-color: #263238;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+}
+
+.navbar_list {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.navbar a {
+  float: left;
+  width: 10em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 5px;
+  font-size: 16px;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar a:hover {
+  background-color: grey;
+  color: #0d47a1;
+}
+
+.navbar a.active {
+  background-color: #01579b;
+  color: white;
 }
 
 h1 {
