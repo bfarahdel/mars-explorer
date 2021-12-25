@@ -13,6 +13,23 @@ class nasa:
     def __init__(self):
         self.nasa_key = os.getenv("nasa_key")
 
+    def astro_pic(self):
+        url = f"https://api.nasa.gov/planetary/apod?api_key={self.nasa_key}"
+        response = requests.get(url=url)
+        if response.ok is True:
+            response_json = response.json()
+        else:
+            return "Data not available"
+
+        img = response_json["url"]
+        title = response_json["title"]
+        expl = response_json["explanation"]
+        copy = response_json["copyright"]
+
+        pic = {"img": img, "title": title, "expl": expl, "copy": copy}
+
+        return pic
+
     def astr(self):
         date = datetime.now()
         today = f"{date.year}-{date.month}-{date.day}"
@@ -168,6 +185,3 @@ class nasa:
         rover_data = {"img": img, "earth_date": earth_date, "rover_name": rover_name}
 
         return rover_data
-
-
-print(nasa().mars_rover())
