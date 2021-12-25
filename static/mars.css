@@ -70,20 +70,25 @@ a:hover {
   border-radius: 10px;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .box_head {
-  font-size: 14pt;
+  font-size: 13pt;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: white;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  height: auto;
+  inline-size: 90px;
+  overflow-wrap: normal;
 }
 
 .box_body {
-  font-size: 14pt;
+  font-size: 13pt;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -94,6 +99,9 @@ a:hover {
   -webkit-columns: 5;
   -moz-columns: 5;
   list-style-type: none;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .rover_images {
