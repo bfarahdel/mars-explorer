@@ -82,13 +82,13 @@ a:hover {
 }
 
 .box_head {
-  font-size: 16pt;
+  font-size: 20pt;
   font-family: 'Roboto', sans-serif;
   border-bottom: solid;
 }
 
 .box_body {
-  font-size: 14pt;
+  font-size: 16pt;
 
 }
 
@@ -113,8 +113,9 @@ p {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 90em;
-  font-size: 14pt;
+  width: 80em;
+  height: auto;
+  font-size: 16pt;
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
