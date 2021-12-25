@@ -164,7 +164,7 @@ class nasa:
         return weather
 
     def mars_rover(self):
-        url = f"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key={self.nasa_key}"
+        url = f"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key={self.nasa_key}"
         response = requests.get(url=url)
         if response.ok is True:
             response_json = response.json()
@@ -173,15 +173,22 @@ class nasa:
 
         img = []
         earth_date = []
+        sol = []
         rover_name = []
-        photos = response_json["photos"]
+        photos = response_json["latest_photos"]
         sample = random.sample(photos, 3)
 
         for photo in sample:
             img.append(photo["img_src"])
             earth_date.append(photo["earth_date"])
+            sol.append(photo["sol"])
             rover_name.append(photo["rover"]["name"])
 
-        rover_data = {"img": img, "earth_date": earth_date, "rover_name": rover_name}
+        rover_data = {
+            "img": img,
+            "earth_date": earth_date,
+            "sol": sol,
+            "rover_name": rover_name,
+        }
 
         return rover_data

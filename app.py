@@ -67,6 +67,7 @@ def mars():
         mars_r_img=rover["img"],
         mars_r_len=len(rover["img"]),
         mars_r_date=rover["earth_date"],
+        mars_r_sol=rover["sol"],
         mars_r_name=rover["rover_name"],
     )
 
