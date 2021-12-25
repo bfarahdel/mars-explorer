@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-  background-color: rgb(0,2,0);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(https://solarsystem.nasa.gov/system/resources/detail_files/2242_full_%282758x2100%29.jpeg);
-  background-repeat: no-repeat;
+  background-color: rgb(0, 2, 0);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(https://solarsystem.nasa.gov/system/resources/detail_files/2242_full_%282758x2100%29.jpeg);
+  background-repeat: repeat-x;
   background-position: center;
   background-size: cover;
 }
 
 .main_title {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   font-size: 36pt;
 }
 
@@ -37,7 +38,7 @@ body {
   text-decoration: none;
   padding: 14px 5px;
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar a:hover {
@@ -52,29 +53,26 @@ body {
 
 h1 {
   text-align: center;
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   color: white;
 }
 
 a {
-    color: #bbdefb;
-    text-align: center;
-    text-decoration: underline;
-}
-    
-a:hover {
-    background-color: #d1c4e9;
-    color: black;
+  color: #bbdefb;
+  text-align: center;
+  text-decoration: underline;
 }
 
+a:hover {
+  background-color: #d1c4e9;
+  color: black;
+}
 
 .box {
-  margin-top: 0%;
   margin-left: auto;
   margin-right: auto;
-  width: 110em;
   text-align: center;
-  border: 1.0mm ridge;
+  border: 1mm ridge;
   border-radius: 10px;
   box-shadow: 0 0 20px #6a1b9a;
   background-color: #212121;
@@ -83,21 +81,20 @@ a:hover {
 
 .box_head {
   font-size: 20pt;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-bottom: solid;
 }
 
 .box_body {
   font-size: 16pt;
-
 }
 
 .props {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    list-style-type: none;
-  }
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-type: none;
+}
 
 li {
   list-style-type: none;
@@ -113,9 +110,8 @@ p {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 80em;
   height: auto;
   font-size: 16pt;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
 }
