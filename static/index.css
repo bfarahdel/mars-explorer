@@ -85,7 +85,10 @@ img {
 p {
   text-align: left;
   width: 20em;
+  height: 34em;
   margin-left: 0px;
   margin-right: auto;
   font-size: 14pt;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
