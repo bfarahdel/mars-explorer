@@ -3,6 +3,10 @@
 
 body {
   background-color: rgb(0,2,0);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(https://solarsystem.nasa.gov/system/resources/detail_files/2242_full_%282758x2100%29.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 h1 {
@@ -13,9 +17,9 @@ h1 {
 }
 
 a {
-    color: white;
+    color: #bbdefb;
     text-align: center;
-    text-decoration: none;
+    text-decoration: underline;
 }
     
 a:hover {
@@ -32,18 +36,18 @@ a:hover {
   text-align: center;
   border: 1.0mm ridge;
   border-radius: 10px;
-  box-shadow: 0 0 10px #69f0ae;
+  box-shadow: 0 0 20px #6a1b9a;
   background-color: #212121;
   color: white;
 }
 
-.cme_head {
+.box_head {
   font-size: 16pt;
   font-family: 'Roboto', sans-serif;
   border-bottom: solid;
 }
 
-.cme_body {
+.box_body {
   font-size: 14pt;
 
 }

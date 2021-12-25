@@ -29,6 +29,7 @@ def astr():
 @app.route("/space_weather", methods=["POST", "GET"])
 def space():
     cme = nasa().space_cme()
+    flare = nasa().space_flare()
 
     return flask.render_template(
         "space_weather.html",
@@ -36,6 +37,10 @@ def space():
         cme_len=len(cme["time"]),
         cme_speed=cme["speed"],
         cme_link=cme["link"],
+        flare_time=flare["begin_time"],
+        flare_len=len(flare["begin_time"]),
+        flare_class=flare["class_type"],
+        flare_link=flare["link"],
     )
 
 

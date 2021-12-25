@@ -10,15 +10,32 @@
 
     <div class="box">
         <ul class="props">
-            <li class="cme_head">Begin Date</li>
-            <li class="cme_head">Speed (km/s)</li>
+            <li class="box_head">Begin Date</li>
+            <li class="box_head">Speed (km/s)</li>
         </ul>
         {% for i in range(0,cme_len) %}
         <ul class="props">
-            <li class="cme_body">
+            <li class="box_body">
                 <a href={{cme_link[i]}}>{{cme_time[i]}}</a>
             </li>
-            <li class="cme_body">{{cme_speed[i]}}</li>
+            <li class="box_body">{{cme_speed[i]}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+
+    <h1>Solar Flare</h1>
+
+    <div class="box">
+        <ul class="props">
+            <li class="box_head">Begin Date</li>
+            <li class="box_head">Class</li>
+        </ul>
+        {% for i in range(0,flare_len) %}
+        <ul class="props">
+            <li class="box_body">
+                <a href={{flare_link[i]}}>{{flare_time[i]}}</a>
+            </li>
+            <li class="box_body">{{flare_class[i]}}</li>
         </ul>
         {% endfor %}
     </div>
