@@ -91,6 +91,14 @@ a:hover {
   text-align: center;
 }
 
+.flashes {
+  text-align: center;
+  font-size: 16pt;
+  font-family: "Roboto", sans-serif;
+  color: rgb(131, 1, 1);
+  padding-bottom: 20px;
+}
+
 th,
 td {
   padding: 15px;

@@ -3,6 +3,7 @@ import flask
 from nasa import nasa
 
 app = flask.Flask(__name__)
+app.secret_key = os.getenv("appSecret")
 
 
 @app.route("/", methods=["POST", "GET"])
@@ -54,6 +55,9 @@ def space():
 def mars():
     weather = nasa().mars_weather()
     rover = nasa().mars_rover()
+
+    if weather["last_time"] == []:
+        flask.flash("No weather data is currently available from NASA.")
 
     return flask.render_template(
         "mars.html",

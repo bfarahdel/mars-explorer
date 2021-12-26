@@ -25,6 +25,12 @@
     </nav>
 
     <h1>Weather in Mars</h1>
+    {% with flashMessage = get_flashed_messages() %}
+    {% if flashMessage[0] == "No weather data is currently available from NASA." %}
+    <ul class=flashes style="padding-left: 0px;">
+        <li style="list-style-type: none; padding-left: 0px;">{{ flashMessage[0] }}</li>
+    </ul>
+    {% else %}
     <table class="box" style="width:100%">
         <tr class="props">
             <th class="box_head">Last Datum for the Sol (UTC)</th>
@@ -43,6 +49,8 @@
         </tr>
         {% endfor %}
     </table>
+    {% endif %}
+    {% endwith %}
 
     <h1>Rover Images</h1>
     <div class="rover_images" style="display: flex;">
