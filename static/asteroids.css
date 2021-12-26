@@ -84,13 +84,6 @@ h1 {
   text-align: center;
 }
 
-.props {
-  columns: 4;
-  -webkit-columns: 4;
-  -moz-columns: 4;
-  list-style-type: none;
-}
-
 li {
   list-style-type: none;
   padding-left: 0px;

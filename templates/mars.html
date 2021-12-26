@@ -25,24 +25,24 @@
     </nav>
 
     <h1>Weather in Mars</h1>
-    <div class="box">
-        <ul class="props">
-            <li class="box_head">Last Datum for the Sol (UTC)</li>
-            <li class="box_head">Atmospheric Temperature (Fahrenheit)</li>
-            <li class="box_head">Average Wind Speed (m/s)</li>
-            <li class="box_head">Average Atmospheric Pressure (Pa)</li>
-            <li class="box_head">Season</li>
-        </ul>
+    <table class="box" style="width:100%">
+        <tr class="props">
+            <th class="box_head">Last Datum for the Sol (UTC)</th>
+            <th class="box_head">Atmospheric Temperature (Fahrenheit)</th>
+            <th class="box_head">Average Wind Speed (m/s)</th>
+            <th class="box_head">Average Atmospheric Pressure (Pa)</th>
+            <th class="box_head">Season</th>
+        </tr>
         {% for i in range(0, mars_weather_len) %}
-        <ul class="props">
-            <li class="box_body">{{mars_weather_time[i]}}</li>
-            <li class="box_body">{{mars_low_atm_temp[i]}} to {{mars_high_atm_temp[i]}}</li>
-            <li class="box_body">{{mars_wind_speed[i]}}</li>
-            <li class="box_body">{{mars_atm_press[i]}}</li>
-            <li class="box_body">{{mars_season[i]}}</li>
-        </ul>
+        <tr class="props">
+            <td class="box_body">{{mars_weather_time[i]}}</td>
+            <td class="box_body">{{mars_low_atm_temp[i]}} to {{mars_high_atm_temp[i]}}</td>
+            <td class="box_body">{{mars_wind_speed[i]}}</td>
+            <td class="box_body">{{mars_atm_press[i]}}</td>
+            <td class="box_body">{{mars_season[i]}}</td>
+        </tr>
         {% endfor %}
-    </div>
+    </table>
 
     <h1>Rover Images</h1>
     <div class="rover_images" style="display: flex;">
