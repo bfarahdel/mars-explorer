@@ -66,10 +66,6 @@ figure {
   width: 60em;
 }
 
-figcaption {
-  text-align: left;
-}
-
 .pic {
   display: flex;
 }

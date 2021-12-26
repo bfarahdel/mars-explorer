@@ -22,9 +22,8 @@ class nasa:
         img = response_json["url"]
         title = response_json["title"]
         expl = response_json["explanation"]
-        copy = response_json["copyright"]
 
-        pic = {"img": img, "title": title, "expl": expl, "copy": copy}
+        pic = {"img": img, "title": title, "expl": expl}
 
         return pic
 
