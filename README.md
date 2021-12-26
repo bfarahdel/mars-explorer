@@ -1,7 +1,7 @@
 # Space Explorer
 A website where users can explore and gain insight to information about asteroids, mars, and more. The website is hosted on [Heroku](https://www.heroku.com/) and developed with the Python [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework.
 
-URL: https://space-explorer-web-app.herokuapp.com/
+**Website URL:** https://space-explorer-web-app.herokuapp.com/
 
 The navbar consists of 4 pages the user can visit:
 1. "Home": the main page of the website. The [Astronomy Picture of the Day](https://apod.nasa.gov/apod/astropix.html) from the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) will be displayed along with the title of the image and a brief description of the image.
