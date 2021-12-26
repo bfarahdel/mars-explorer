@@ -4,8 +4,6 @@ import os
 import requests
 import random
 
-from requests.models import Response
-
 load_dotenv(find_dotenv())
 
 
@@ -176,13 +174,14 @@ class nasa:
         sol = []
         rover_name = []
         photos = response_json["latest_photos"]
-        sample = random.sample(photos, 3)
+        photos_list = list(range(0, len(photos)))
+        photo_ind = random.sample(photos_list, 3)
 
-        for photo in sample:
-            img.append(photo["img_src"])
-            earth_date.append(photo["earth_date"])
-            sol.append(photo["sol"])
-            rover_name.append(photo["rover"]["name"])
+        for i in photo_ind:
+            img.append(photos[i]["img_src"])
+            earth_date.append(photos[i]["earth_date"])
+            sol.append(photos[i]["sol"])
+            rover_name.append(photos[i]["rover"]["name"])
 
         rover_data = {
             "img": img,
