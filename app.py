@@ -13,6 +13,7 @@ def main():
         pic_img=astro_pic["img"],
         pic_title=astro_pic["title"],
         pic_expl=astro_pic["expl"],
+        pic_copy=astro_pic["copy"],
     )
 
 

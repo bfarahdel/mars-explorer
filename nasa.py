@@ -19,11 +19,12 @@ class nasa:
         else:
             return "Data not available"
 
-        img = response_json["url"]
-        title = response_json["title"]
-        expl = response_json["explanation"]
+        img = response_json["url"] if "url" in response_json else "No image information provided from NASA"
+        title = response_json["title"] if "title" in response_json else "No title information provided from NASA"
+        expl = response_json["explanation"] if "explanation" in response_json else "No explanation information provided from NASA"
+        copy = response_json["copyright"] if "copyright" in response_json else "No copyright information provided from NASA"
 
-        pic = {"img": img, "title": title, "expl": expl}
+        pic = {"img": img, "title": title, "expl": expl, "copy": copy}
 
         return pic
 
@@ -37,8 +38,20 @@ class nasa:
         else:
             return "Data not available"
 
-        num_astr = response_json["element_count"]
-        earth_obj = response_json["near_earth_objects"][today]
+        num_astr = response_json["element_count"] if "element_count" in response_json else "No asteroid information provided from NASA"
+
+        if "near_earth_objects" in response_json:
+            earth_obj = response_json["near_earth_objects"][today]
+        else:
+            num_astr = "No asteroid information provided from NASA"
+            astr_prop = {
+            "name_astr": ["No asteroid information provided from NASA"],
+            "hazard": ["No asteroid information provided from NASA"],
+            "diam_min": ["No asteroid information provided from NASA"],
+            "diam_max": ["No asteroid information provided from NASA"],
+            "rel_vel": ["No asteroid information provided from NASA"],
+        }
+            return num_astr, astr_prop
 
         # get the properties of each asteroid
         name_astr = []
@@ -97,9 +110,9 @@ class nasa:
         speed = []
         link = []
         for event in response_json:
-            time.append(event["time21_5"][0:10])
-            speed.append(event["speed"])
-            link.append(event["link"])
+            time.append(event["time21_5"][0:10]) if "time21_5" in event else time.append("Time info not available from NASA")
+            speed.append(event["speed"]) if "speed" in event else speed.append("Speed info not available from NASA")
+            link.append(event["link"]) if "link" in event else link.append("Link info not available from NASA")
 
         cme = {"time": time, "speed": speed, "link": link}
 
@@ -117,9 +130,9 @@ class nasa:
         class_type = []
         link = []
         for event in response_json:
-            begin_time.append(event["beginTime"][0:10])
-            class_type.append(event["classType"])
-            link.append(event["link"])
+            begin_time.append(event["beginTime"][0:10]) if "beginTime" in event else link.append("Link info not available from NASA")
+            class_type.append(event["classType"]) if "classType" in event else link.append("Class info not available from NASA")
+            link.append(event["link"]) if "link" in event else link.append("Link info not available from NASA")
 
         flare = {"begin_time": begin_time, "class_type": class_type, "link": link}
 
@@ -142,12 +155,12 @@ class nasa:
         keys = list(response_json.keys())
         for event_id in list(response_json.keys())[:-2]:
             event = response_json[event_id]
-            last_time.append(event["Last_UTC"])
-            high_atm_temp.append(round(event["AT"]["mx"], 3))
-            low_atm_temp.append(round(event["AT"]["mn"], 3))
-            wind_speed.append(round(event["HWS"]["av"], 3))
-            atm_press.append(round(event["PRE"]["av"], 3))
-            season.append(event["Season"])
+            last_time.append(event["Last_UTC"]) if "Last_UTC" in event else last_time.append("Last time info not available from NASA")
+            high_atm_temp.append(round(event["AT"]["mx"], 3)) if "AT" in event else high_atm_temp.append("Atmospheric temperature info not available from NASA")
+            low_atm_temp.append(round(event["AT"]["mn"], 3)) if "AT" in event else low_atm_temp.append("Atmospheric temperature info not available from NASA")
+            wind_speed.append(round(event["HWS"]["av"], 3)) if "HWS" in event else wind_speed.append("Wind speed info not available from NASA")
+            atm_press.append(round(event["PRE"]["av"], 3)) if "PRE" in event else atm_press.append("Link info not available from NASA")
+            season.append(event["Season"]) if "Season" in event else season.append("Season info not available from NASA")
 
         weather = {
             "last_time": last_time,
@@ -172,7 +185,17 @@ class nasa:
         earth_date = []
         sol = []
         rover_name = []
+        if "latest_photos" not in response_json:
+            rover_data = {
+            "img": "Image not available from NASA",
+            "earth_date": "Earth date not available from NASA",
+            "sol": "Sol not available from NASA",
+            "rover_name": "Rover name not available from NASA",
+            }
+            return rover_data
+
         photos = response_json["latest_photos"]
+
         photos_list = list(range(0, len(photos)))
         photo_ind = random.sample(photos_list, 3)
 
