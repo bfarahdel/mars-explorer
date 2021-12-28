@@ -11,10 +11,11 @@ def main():
     astro_pic = nasa().astro_pic()
     return flask.render_template(
         "index.html",
-        pic_img=astro_pic["img"],
+        pic_url=astro_pic["pic_url"],
         pic_title=astro_pic["title"],
         pic_expl=astro_pic["expl"],
         pic_copy=astro_pic["copy"],
+        pic_media=astro_pic["media"],
     )
 
 

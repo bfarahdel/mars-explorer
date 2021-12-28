@@ -28,7 +28,11 @@
     <h3 style="font-family: 'Playfair Display', serif;">{{pic_title}}</h3>
     <div class="pic">
         <figure>
-            <img src={{pic_img}} alt="astronomy picture">
+            {% if pic_media=="video" %}
+            <iframe src={{pic_url}}></iframe>
+            {% else %}
+            <img src={{pic_url}} alt="astronomy picture">
+            {% endif %}
             <figcaption>Copyright: {{pic_copy}}</figcaption>
         </figure>
         <p style="font-family: 'Montserrat', sans-serif;">{{pic_expl}}</p>
