@@ -76,11 +76,10 @@ figcaption {
 
 img, iframe {
   margin-left: auto;
-  margin-right: 0px;
-  width: 60em;
-  height: 40em;
-  display: flex;
-  flex-wrap: wrap;
+  margin-right: auto;
+  max-width: 60em;
+  max-height: 40em;
+  display: block;
   border-radius: 10px;
 }
 

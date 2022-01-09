@@ -1,5 +1,4 @@
 from dotenv import find_dotenv, load_dotenv
-from datetime import datetime
 import os
 import requests
 import random
@@ -56,9 +55,7 @@ class nasa:
         return pic
 
     def astr(self):
-        date = datetime.now()
-        today = f"{date.year}-{date.month}-{date.day}"
-        url = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={today}&end_date={today}&api_key={self.nasa_key}"
+        url = f"https://api.nasa.gov/neo/rest/v1/feed?&api_key={self.nasa_key}"
         response = requests.get(url=url)
         if response.ok is True:
             response_json = response.json()
@@ -72,7 +69,8 @@ class nasa:
         )
 
         if "near_earth_objects" in response_json:
-            earth_obj = response_json["near_earth_objects"][today]
+            earth_obj_ind = list(response_json["near_earth_objects"].keys())[0]
+            earth_obj = response_json["near_earth_objects"][earth_obj_ind]
         else:
             num_astr = "No asteroid information provided from NASA"
             astr_prop = {
