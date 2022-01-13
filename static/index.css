@@ -61,22 +61,16 @@ h3 {
   font-size: 20pt;
 }
 
-figure {
-  margin-left: auto;
-  width: 60em;
-}
-
 figcaption {
   text-align: left;
 }
 
 .pic {
   display: flex;
+  justify-content: center;
 }
 
 img, iframe {
-  margin-left: auto;
-  margin-right: auto;
   max-width: 60em;
   max-height: 40em;
   display: block;
@@ -87,8 +81,6 @@ p {
   text-align: left;
   width: 20em;
   height: 30em;
-  margin-left: 0px;
-  margin-right: auto;
   font-size: 16pt;
   overflow-x: hidden;
   overflow-y: auto;
