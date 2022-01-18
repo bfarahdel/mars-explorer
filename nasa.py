@@ -88,6 +88,7 @@ class nasa:
         diam_min = []
         diam_max = []
         rel_vel = []
+        astr_dist = []
 
         for obj in earth_obj:
             name_astr.append(obj["name"])
@@ -116,6 +117,12 @@ class nasa:
                     3,
                 )
             )
+            astr_dist.append(
+                round(
+                    float(obj["close_approach_data"][0]["miss_distance"]["kilometers"]),
+                    3,
+                )
+            )
 
         astr_prop = {
             "name_astr": name_astr,
@@ -123,6 +130,7 @@ class nasa:
             "diam_min": diam_min,
             "diam_max": diam_max,
             "rel_vel": rel_vel,
+            "astr_dist": astr_dist,
         }
 
         return num_astr, astr_prop

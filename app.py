@@ -31,6 +31,7 @@ def astr():
         astr_diam_min=astr_prop["diam_min"],
         astr_diam_max=astr_prop["diam_max"],
         astr_rel_vel=astr_prop["rel_vel"],
+        astr_dist=astr_prop["astr_dist"],
     )
 
 

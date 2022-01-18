@@ -4,6 +4,7 @@
 <head>
     <link href="/static/asteroids.css" rel="stylesheet">
     <h1 class="main_title">Space Explorer</h1>
+    <title>Asteroids</title>
 </head>
 
 <body>
@@ -31,6 +32,7 @@
             <th class="astr_head">Threat?</th>
             <th class="astr_head">Estimated Diameter (Kilometers)</th>
             <th class="astr_head">Relative Velocity (Kilometers/Second)</th>
+            <th class="astr_head">Distance to Earth (Kilometers)</th>
         </tr>
         {% for i in range(0,astr_prop_len) %}
         <tr>
@@ -38,6 +40,7 @@
             <td class="astr_body">{{astr_hazard[i]}}</td>
             <td class="astr_body">{{astr_diam_min[i]}} to {{astr_diam_max[i]}}</td>
             <td class="astr_body">{{astr_rel_vel[i]}}</td>
+            <td class="astr_body">{{astr_dist[i]}}</td>
         </tr>
         {% endfor %}
     </table>
