@@ -274,7 +274,10 @@ class nasa:
         photos = response_json["latest_photos"]
 
         photos_list = list(range(0, len(photos)))
-        photo_ind = random.sample(photos_list, 3)
+        if len(photos_list) < 3:
+            photo_ind = random.sample(photos_list, len(photos_list))
+        else:
+            photo_ind = random.sample(photos_list, 3)
 
         for i in photo_ind:
             img.append(photos[i]["img_src"])
