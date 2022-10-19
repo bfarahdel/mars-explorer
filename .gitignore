@@ -1,5 +1,7 @@
 .env
+rootkey.csv
 __pycache__
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
