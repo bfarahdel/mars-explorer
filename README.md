@@ -2,9 +2,9 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/space-explorer/bfarahdel)](https://replit.com/@BritnyFarahdel/space-explorer#.replit)
 
-A website where users can explore and gain insight to information about asteroids, mars, and more. The website is hosted on [Heroku](https://www.heroku.com/) and developed with the Python [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework, and utilizes the [NASA API](https://api.nasa.gov/) from the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/).
+A website where users can explore and gain insight to information about asteroids, mars, and more. The website is hosted on [Replit](https://replit.com/) and developed with the Python [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework, and utilizes the [NASA API](https://api.nasa.gov/) from the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/).
 
-**Website URL:** https://space-explorer-web-app.herokuapp.com/ (Please also read the **Warning** section below for information regarding the Mars webpage)
+**Website URL:** https://replit.com/@BritnyFarahdel/space-explorer (Please also read the **Warning** section below for information regarding the Mars webpage)
 
 The navbar consists of 4 pages the user can visit:
 
