@@ -1,6 +1,7 @@
 # Space Explorer
 
 [![Run on Repl.it](https://repl.it/badge/github/space-explorer/bfarahdel)](https://replit.com/@BritnyFarahdel/space-explorer#.replit)
+[![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://spaceexplorerweb-c2a157af97f1.herokuapp.com/)
 
 A website where users can explore and gain insight to information about asteroids, mars, and more. The website is hosted on [Replit](https://replit.com/) and developed with the Python [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework, and utilizes the [NASA API](https://api.nasa.gov/) from the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/).
 
